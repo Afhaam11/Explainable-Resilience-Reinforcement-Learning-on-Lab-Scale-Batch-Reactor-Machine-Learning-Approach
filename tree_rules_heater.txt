@@ -1,0 +1,190 @@
+Surrogate Decision Tree Rules — Hc
+max_depth=5  |  R²=0.9027
+======================================================================
+
+Format:  IF <condition> THEN <output> ≈ <value> [samples=N]
+Features (normalised 0–1 unless e_norm in -1–1):
+  I_hat_norm      → physical [0, 4.5e-05] mol/L
+  M_hat_norm      → physical [0, 0.703] mol/L
+  Tr_norm         → physical [40, 80] °C
+  Tj_norm         → physical [27, 70] °C
+  e_norm          → physical [-20, 20] °C
+
+----------------------------------------------------------------------
+
+IF M_hat_norm ≤ 0.9979  (≈ 0.7019 mol/L)
+   AND e_norm ≤ 0.0435  (≈ -18.2606 °C)
+   AND e_norm ≤ 0.0004  (≈ -19.9828 °C)
+   AND e_norm ≤ -0.0079  (≈ -20.3158 °C)
+   AND Tr_norm ≤ 0.1375  (≈ 45.5006 °C)
+   THEN Hc ≈ 12.8456 mA  [samples=3]
+
+IF M_hat_norm ≤ 0.9979  (≈ 0.7019 mol/L)
+   AND e_norm ≤ 0.0435  (≈ -18.2606 °C)
+   AND e_norm ≤ 0.0004  (≈ -19.9828 °C)
+   AND e_norm ≤ -0.0079  (≈ -20.3158 °C)
+   AND Tr_norm >  0.1375  (≈ 45.5006 °C)
+   THEN Hc ≈ 11.9073 mA  [samples=6]
+
+IF M_hat_norm ≤ 0.9979  (≈ 0.7019 mol/L)
+   AND e_norm ≤ 0.0435  (≈ -18.2606 °C)
+   AND e_norm ≤ 0.0004  (≈ -19.9828 °C)
+   AND e_norm >  -0.0079  (≈ -20.3158 °C)
+   AND M_hat_norm ≤ 0.9820  (≈ 0.6907 mol/L)
+   THEN Hc ≈ 10.6717 mA  [samples=781]
+
+IF M_hat_norm ≤ 0.9979  (≈ 0.7019 mol/L)
+   AND e_norm ≤ 0.0435  (≈ -18.2606 °C)
+   AND e_norm ≤ 0.0004  (≈ -19.9828 °C)
+   AND e_norm >  -0.0079  (≈ -20.3158 °C)
+   AND M_hat_norm >  0.9820  (≈ 0.6907 mol/L)
+   THEN Hc ≈ 11.0604 mA  [samples=12]
+
+IF M_hat_norm ≤ 0.9979  (≈ 0.7019 mol/L)
+   AND e_norm ≤ 0.0435  (≈ -18.2606 °C)
+   AND e_norm >  0.0004  (≈ -19.9828 °C)
+   AND M_hat_norm ≤ 0.5527  (≈ 0.3888 mol/L)
+   AND Tj_norm ≤ 0.3461  (≈ 41.8822 °C)
+   THEN Hc ≈ 10.7800 mA  [samples=162]
+
+IF M_hat_norm ≤ 0.9979  (≈ 0.7019 mol/L)
+   AND e_norm ≤ 0.0435  (≈ -18.2606 °C)
+   AND e_norm >  0.0004  (≈ -19.9828 °C)
+   AND M_hat_norm ≤ 0.5527  (≈ 0.3888 mol/L)
+   AND Tj_norm >  0.3461  (≈ 41.8822 °C)
+   THEN Hc ≈ 10.4660 mA  [samples=1691]
+
+IF M_hat_norm ≤ 0.9979  (≈ 0.7019 mol/L)
+   AND e_norm ≤ 0.0435  (≈ -18.2606 °C)
+   AND e_norm >  0.0004  (≈ -19.9828 °C)
+   AND M_hat_norm >  0.5527  (≈ 0.3888 mol/L)
+   AND Tr_norm ≤ 0.2185  (≈ 48.7411 °C)
+   THEN Hc ≈ 10.4259 mA  [samples=74]
+
+IF M_hat_norm ≤ 0.9979  (≈ 0.7019 mol/L)
+   AND e_norm ≤ 0.0435  (≈ -18.2606 °C)
+   AND e_norm >  0.0004  (≈ -19.9828 °C)
+   AND M_hat_norm >  0.5527  (≈ 0.3888 mol/L)
+   AND Tr_norm >  0.2185  (≈ 48.7411 °C)
+   THEN Hc ≈ 10.1277 mA  [samples=75]
+
+IF M_hat_norm ≤ 0.9979  (≈ 0.7019 mol/L)
+   AND e_norm >  0.0435  (≈ -18.2606 °C)
+   AND Tr_norm ≤ 0.4801  (≈ 59.2021 °C)
+   AND Tr_norm ≤ 0.4690  (≈ 58.7581 °C)
+   AND M_hat_norm ≤ 0.2607  (≈ 0.1834 mol/L)
+   THEN Hc ≈ 10.9018 mA  [samples=193]
+
+IF M_hat_norm ≤ 0.9979  (≈ 0.7019 mol/L)
+   AND e_norm >  0.0435  (≈ -18.2606 °C)
+   AND Tr_norm ≤ 0.4801  (≈ 59.2021 °C)
+   AND Tr_norm ≤ 0.4690  (≈ 58.7581 °C)
+   AND M_hat_norm >  0.2607  (≈ 0.1834 mol/L)
+   THEN Hc ≈ 10.8836 mA  [samples=91]
+
+IF M_hat_norm ≤ 0.9979  (≈ 0.7019 mol/L)
+   AND e_norm >  0.0435  (≈ -18.2606 °C)
+   AND Tr_norm ≤ 0.4801  (≈ 59.2021 °C)
+   AND Tr_norm >  0.4690  (≈ 58.7581 °C)
+   AND Tj_norm ≤ 0.3643  (≈ 42.6667 °C)
+   THEN Hc ≈ 10.8298 mA  [samples=21]
+
+IF M_hat_norm ≤ 0.9979  (≈ 0.7019 mol/L)
+   AND e_norm >  0.0435  (≈ -18.2606 °C)
+   AND Tr_norm ≤ 0.4801  (≈ 59.2021 °C)
+   AND Tr_norm >  0.4690  (≈ 58.7581 °C)
+   AND Tj_norm >  0.3643  (≈ 42.6667 °C)
+   THEN Hc ≈ 10.7826 mA  [samples=20]
+
+IF M_hat_norm ≤ 0.9979  (≈ 0.7019 mol/L)
+   AND e_norm >  0.0435  (≈ -18.2606 °C)
+   AND Tr_norm >  0.4801  (≈ 59.2021 °C)
+   AND Tj_norm ≤ 0.3691  (≈ 42.8714 °C)
+   AND e_norm ≤ 0.0537  (≈ -17.8503 °C)
+   THEN Hc ≈ 10.6442 mA  [samples=16]
+
+IF M_hat_norm ≤ 0.9979  (≈ 0.7019 mol/L)
+   AND e_norm >  0.0435  (≈ -18.2606 °C)
+   AND Tr_norm >  0.4801  (≈ 59.2021 °C)
+   AND Tj_norm ≤ 0.3691  (≈ 42.8714 °C)
+   AND e_norm >  0.0537  (≈ -17.8503 °C)
+   THEN Hc ≈ 10.7184 mA  [samples=18]
+
+IF M_hat_norm ≤ 0.9979  (≈ 0.7019 mol/L)
+   AND e_norm >  0.0435  (≈ -18.2606 °C)
+   AND Tr_norm >  0.4801  (≈ 59.2021 °C)
+   AND Tj_norm >  0.3691  (≈ 42.8714 °C)
+   AND M_hat_norm ≤ 0.2179  (≈ 0.1532 mol/L)
+   THEN Hc ≈ 10.4793 mA  [samples=12]
+
+IF M_hat_norm ≤ 0.9979  (≈ 0.7019 mol/L)
+   AND e_norm >  0.0435  (≈ -18.2606 °C)
+   AND Tr_norm >  0.4801  (≈ 59.2021 °C)
+   AND Tj_norm >  0.3691  (≈ 42.8714 °C)
+   AND M_hat_norm >  0.2179  (≈ 0.1532 mol/L)
+   THEN Hc ≈ 10.5681 mA  [samples=14]
+
+IF M_hat_norm >  0.9979  (≈ 0.7019 mol/L)
+   AND M_hat_norm ≤ 0.9990  (≈ 0.7027 mol/L)
+   AND e_norm ≤ -0.0219  (≈ -20.8758 °C)
+   AND e_norm ≤ -0.0268  (≈ -21.0730 °C)
+   THEN Hc ≈ 15.4144 mA  [samples=1]
+
+IF M_hat_norm >  0.9979  (≈ 0.7019 mol/L)
+   AND M_hat_norm ≤ 0.9990  (≈ 0.7027 mol/L)
+   AND e_norm ≤ -0.0219  (≈ -20.8758 °C)
+   AND e_norm >  -0.0268  (≈ -21.0730 °C)
+   AND e_norm ≤ -0.0247  (≈ -20.9880 °C)
+   THEN Hc ≈ 14.9994 mA  [samples=1]
+
+IF M_hat_norm >  0.9979  (≈ 0.7019 mol/L)
+   AND M_hat_norm ≤ 0.9990  (≈ 0.7027 mol/L)
+   AND e_norm ≤ -0.0219  (≈ -20.8758 °C)
+   AND e_norm >  -0.0268  (≈ -21.0730 °C)
+   AND e_norm >  -0.0247  (≈ -20.9880 °C)
+   THEN Hc ≈ 14.5854 mA  [samples=1]
+
+IF M_hat_norm >  0.9979  (≈ 0.7019 mol/L)
+   AND M_hat_norm ≤ 0.9990  (≈ 0.7027 mol/L)
+   AND e_norm >  -0.0219  (≈ -20.8758 °C)
+   THEN Hc ≈ 13.8157 mA  [samples=1]
+
+IF M_hat_norm >  0.9979  (≈ 0.7019 mol/L)
+   AND M_hat_norm >  0.9990  (≈ 0.7027 mol/L)
+   AND M_hat_norm ≤ 0.9995  (≈ 0.7031 mol/L)
+   AND e_norm ≤ -0.0355  (≈ -21.4216 °C)
+   THEN Hc ≈ 16.7939 mA  [samples=1]
+
+IF M_hat_norm >  0.9979  (≈ 0.7019 mol/L)
+   AND M_hat_norm >  0.9990  (≈ 0.7027 mol/L)
+   AND M_hat_norm ≤ 0.9995  (≈ 0.7031 mol/L)
+   AND e_norm >  -0.0355  (≈ -21.4216 °C)
+   THEN Hc ≈ 16.1827 mA  [samples=1]
+
+IF M_hat_norm >  0.9979  (≈ 0.7019 mol/L)
+   AND M_hat_norm >  0.9990  (≈ 0.7027 mol/L)
+   AND M_hat_norm >  0.9995  (≈ 0.7031 mol/L)
+   AND Tr_norm ≤ 0.1115  (≈ 44.4603 °C)
+   AND M_hat_norm ≤ 0.9999  (≈ 0.7033 mol/L)
+   THEN Hc ≈ 17.3966 mA  [samples=1]
+
+IF M_hat_norm >  0.9979  (≈ 0.7019 mol/L)
+   AND M_hat_norm >  0.9990  (≈ 0.7027 mol/L)
+   AND M_hat_norm >  0.9995  (≈ 0.7031 mol/L)
+   AND Tr_norm ≤ 0.1115  (≈ 44.4603 °C)
+   AND M_hat_norm >  0.9999  (≈ 0.7033 mol/L)
+   THEN Hc ≈ 17.5905 mA  [samples=2]
+
+IF M_hat_norm >  0.9979  (≈ 0.7019 mol/L)
+   AND M_hat_norm >  0.9990  (≈ 0.7027 mol/L)
+   AND M_hat_norm >  0.9995  (≈ 0.7031 mol/L)
+   AND Tr_norm >  0.1115  (≈ 44.4603 °C)
+   AND e_norm ≤ -0.0426  (≈ -21.7025 °C)
+   THEN Hc ≈ 17.2317 mA  [samples=1]
+
+IF M_hat_norm >  0.9979  (≈ 0.7019 mol/L)
+   AND M_hat_norm >  0.9990  (≈ 0.7027 mol/L)
+   AND M_hat_norm >  0.9995  (≈ 0.7031 mol/L)
+   AND Tr_norm >  0.1115  (≈ 44.4603 °C)
+   AND e_norm >  -0.0426  (≈ -21.7025 °C)
+   THEN Hc ≈ 17.0327 mA  [samples=1]
